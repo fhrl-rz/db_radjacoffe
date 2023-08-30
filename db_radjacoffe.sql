@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Agu 2023 pada 18.37
+-- Waktu pembuatan: 30 Agu 2023 pada 19.52
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.0.13
 
@@ -52,6 +52,15 @@ CREATE TABLE `makanans` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `makanans`
+--
+
+INSERT INTO `makanans` (`id`, `name`, `description`, `price`, `image_url`, `created_at`, `updated_at`) VALUES
+(3, 'Mie Aceh Basah', 'enak', '12000', 'https://tse3.mm.bing.net/th?id=OIP.HBlpZNMq2F_ylgFv-72m3AHaE8&pid=Api&P=0&h=180', '2023-08-30 10:48:00', '2023-08-30 10:48:00'),
+(4, 'Mie Tumis', 'Enak Rasanya', '12000', 'https://tse3.mm.bing.net/th?id=OIP.eNa_4lo9JiJ8jaVW61Ot5gHaD3&pid=Api&P=0&h=180', '2023-08-30 10:48:45', '2023-08-30 10:48:45'),
+(5, 'Mie Aceh Goreng', 'enak', '15000', 'https://tse4.mm.bing.net/th?id=OIP.xbIms0ZOFJnVWi7cOR3H3AHaFP&pid=Api&P=0&h=180', '2023-08-30 10:49:38', '2023-08-30 10:50:28');
 
 -- --------------------------------------------------------
 
@@ -138,7 +147,11 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (19, 'App\\Models\\User', 1, 'Personal Access Token', 'f38efb0d3bcf0c7f43f69f5db1a480a64785bad10f757a65fb06a9715aa430e2', '[\"*\"]', NULL, NULL, '2023-08-30 09:26:42', '2023-08-30 09:26:42'),
 (20, 'App\\Models\\User', 1, 'Personal Access Token', 'd06e7c36847f779099f0a56c27325c97462af5fad1ed7bb17ce2fdf34e30beb1', '[\"*\"]', NULL, NULL, '2023-08-30 09:29:53', '2023-08-30 09:29:53'),
 (21, 'App\\Models\\User', 1, 'Personal Access Token', '7f400b194f0bc2f5b5e487f12ba0ef59fb1513d1443a2c5c8ca3704a987f829f', '[\"*\"]', NULL, NULL, '2023-08-30 09:32:41', '2023-08-30 09:32:41'),
-(22, 'App\\Models\\User', 1, 'Personal Access Token', 'b5e3b0b35344523a41a973969d137307a1544f0759b62e913514d50957d86fe8', '[\"*\"]', NULL, NULL, '2023-08-30 09:34:10', '2023-08-30 09:34:10');
+(22, 'App\\Models\\User', 1, 'Personal Access Token', 'b5e3b0b35344523a41a973969d137307a1544f0759b62e913514d50957d86fe8', '[\"*\"]', NULL, NULL, '2023-08-30 09:34:10', '2023-08-30 09:34:10'),
+(23, 'App\\Models\\User', 1, 'Personal Access Token', '1856ae77dd5a6fed7bd4b25148d192bc1f400cf0c17bee508433cfb3f8b2a4fb', '[\"*\"]', NULL, NULL, '2023-08-30 10:00:46', '2023-08-30 10:00:46'),
+(24, 'App\\Models\\User', 1, 'Personal Access Token', '20f3c633f42021da6f45ce6cb2177074b9add50eb1098bfe18a35849ca31fcd1', '[\"*\"]', NULL, NULL, '2023-08-30 10:17:27', '2023-08-30 10:17:27'),
+(25, 'App\\Models\\User', 5, 'Personal Access Token', 'bf3661e96a640fcb7def71a67c3cfaf28c07b70000df0b1f95910715530ae016', '[\"*\"]', NULL, NULL, '2023-08-30 10:45:37', '2023-08-30 10:45:37'),
+(26, 'App\\Models\\User', 1, 'Personal Access Token', '6fc88524ddaebd4a4716783913a7353f1ba6519ebabde396a6b7bd4fbbd9d1fc', '[\"*\"]', NULL, NULL, '2023-08-30 10:47:37', '2023-08-30 10:47:37');
 
 -- --------------------------------------------------------
 
@@ -162,17 +175,14 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image_url`, `created_at`, `updated_at`) VALUES
 (1, 'Kopi Sanger Aceh', 'Sanger adalah campuran kopi hitam, susu kental manis dan gula. Secara fisik, sanger memang mirip kopi susu atau latte.', '7000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-29 10:04:39', '2023-08-30 09:32:52'),
-(2, 'Espresso', 'Espresso merupakan proses penyeduhan kopi dengan mengunakan tekanan tinggi.', '7000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-29 10:08:07', '2023-08-29 11:34:13'),
-(3, 'Sanger Dingin', 'Sanger dingin cocoknya dikonsumsi pada saat makan siang atau kondisi Anda membutuhkan minuman dingin. Tapi bagi Anda dengan selera tertentu panas atau dingin, kapanpun dapat memesannya.', '10000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-29 10:32:39', '2023-08-29 11:34:21'),
-(4, 'Kopi Sanger (Reguler)', 'Dingin Rasanya', '10000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:14:46', '2023-08-30 02:14:46'),
-(5, 'Long Black', 'Kopi Hitam', '7000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:20:40', '2023-08-30 02:20:40'),
-(6, 'Long Black Dingin', 'Kopi Hitam', '7000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:21:06', '2023-08-30 02:22:10'),
-(9, 'Cappucino Panas', 'Enak', '5000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:22:40', '2023-08-30 02:22:40'),
-(10, 'Cappucino Dingin', 'Enak', '10000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:22:57', '2023-08-30 02:22:57'),
-(11, 'Cappucino Dingin + Susu', 'Dingin Rasanya', '12000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:23:24', '2023-08-30 02:23:24'),
-(12, 'Cappucino Bland', 'Enak', '12000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:23:53', '2023-08-30 02:23:53'),
-(13, 'CoffeMix Panas', 'Enak', '5000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:24:22', '2023-08-30 02:24:22'),
-(14, 'CoffeMixx Dingin', 'Enak', '7000', 'http://2.bp.blogspot.com/-fgKhR9Cw2fU/VjmEeOxwlWI/AAAAAAAAAs0/-ea2S9Bvz90/s1600/kopi%2Bsanger.jpg', '2023-08-30 02:24:47', '2023-08-30 09:34:23');
+(2, 'Espresso Bland', 'Espresso merupakan proses penyeduhan kopi dengan mengunakan tekanan tinggi.', '7000', 'https://tse2.mm.bing.net/th?id=OIP.PjskGARzNAYHAJHLIJD2qQHaE7&pid=Api&P=0&h=180', '2023-08-29 10:08:07', '2023-08-30 10:27:52'),
+(3, 'Sanger Dingin', 'Sanger dingin cocoknya dikonsumsi pada saat makan siang atau kondisi Anda membutuhkan minuman dingin. Tapi bagi Anda dengan selera tertentu panas atau dingin, kapanpun dapat memesannya.', '10000', 'https://lh3.googleusercontent.com/-fnYlBDiUZmI/XQ2oZfxAvmI/AAAAAAAAaaU/zsN1rfTnFN0M-ugro6pynXL1BXg8jhEJgCLcBGAs/s1600/IMG_1839.JPG', '2023-08-29 10:32:39', '2023-08-30 10:31:02'),
+(4, 'Sanger (Reguler)', 'Dingin Rasanya', '10000', 'https://tse2.mm.bing.net/th?id=OIP._lNwjPw20Pd17QnqnNTRLgHaFj&pid=Api&P=0&h=180', '2023-08-30 02:14:46', '2023-08-30 10:36:10'),
+(5, 'Long Black', 'Kopi Hitam', '7000', 'https://tse2.mm.bing.net/th?id=OIP.LUVobbWGshOvnHgW8DspCwHaD9&pid=Api&P=0&h=180', '2023-08-30 02:20:40', '2023-08-30 10:37:38'),
+(6, 'Long Black Dingin', 'Kopi Hitam', '7000', 'https://tse4.mm.bing.net/th?id=OIP.WLKHznsC2xWNqHEHAA4rBgHaE7&pid=Api&P=0&h=180', '2023-08-30 02:21:06', '2023-08-30 10:34:51'),
+(9, 'Cappucino Panas', 'Enak', '6000', 'https://tse4.mm.bing.net/th?id=OIP.3thd4i6u3PRBaSZjOuE-uQHaFJ&pid=Api&P=0&h=180', '2023-08-30 02:22:40', '2023-08-30 10:38:17'),
+(10, 'Cappucino Dingin', 'Enak', '10000', 'https://tse2.mm.bing.net/th?id=OIP.55FTwrXm-8L8BXa_W2rtHwAAAA&pid=Api&P=0&h=180', '2023-08-30 02:22:57', '2023-08-30 10:42:50'),
+(11, 'Cappucino Cincau', 'Dingin Rasanya', '12000', 'https://tse3.mm.bing.net/th?id=OIP.aweGkZOh1dfBtSDQFtgDzgHaFL&pid=Api&P=0&h=180', '2023-08-30 02:23:24', '2023-08-30 10:43:36');
 
 -- --------------------------------------------------------
 
@@ -331,7 +341,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `makanans`
 --
 ALTER TABLE `makanans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -343,7 +353,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT untuk tabel `products`
