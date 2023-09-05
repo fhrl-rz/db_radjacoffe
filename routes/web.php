@@ -45,18 +45,18 @@ Route::put('/lpelayans/{id}', [LpelayanController::class, 'update']);
 Route::delete('/lpelayans/{id}', [LpelayanController::class, 'destroy']);
 
 Route::get('/lkasirs', [LkasirController::class, 'index']);
-Route::get('/lkasirs/create', [LpelayanController::class, 'create']);
-Route::post('/lkasirs', [LpelayanController::class, 'store']);
-Route::get('/lkasirs/{id}/edit', [LpelayanController::class, 'edit']);
-Route::put('/lkasirs/{id}', [LpelayanController::class, 'update']);
-Route::delete('/lkasirs/{id}', [LpelayanController::class, 'destroy']);
+Route::get('/lkasirs/create', [LkasirController::class, 'create']);
+Route::post('/lkasirs', [LkasirController::class, 'store']);
+Route::get('/lkasirs/{id}/edit', [LkasirController::class, 'edit']);
+Route::put('/lkasirs/{id}', [LkasirController::class, 'update']);
+Route::delete('/lkasirs/{id}', [LkasirController::class, 'destroy']);
 
 Route::get('/lchefs', [LchefController::class, 'index']);
-Route::get('/lchefs/create', [LpelayanController::class, 'create']);
-Route::post('/lchefs', [LpelayanController::class, 'store']);
-Route::get('/lchefs/{id}/edit', [LpelayanController::class, 'edit']);
-Route::put('/lchefs/{id}', [LpelayanController::class, 'update']);
-Route::delete('/lchefs/{id}', [LpelayanController::class, 'destroy']);
+Route::get('/lchefs/create', [LchefController::class, 'create']);
+Route::post('/lchefs', [LchefController::class, 'store']);
+Route::get('/lchefs/{id}/edit', [LchefController::class, 'edit']);
+Route::put('/lchefs/{id}', [LchefController::class, 'update']);
+Route::delete('/lchefs/{id}', [LchefController::class, 'destroy']);
 
 
 
