@@ -29,13 +29,6 @@ Route::get('/products/{id}',[ProductApiController::class,'show']);
 Route::put('/products/{id}',[ProductApiController::class,'update']);
 Route::delete('/products/{id}',[ProductApiController::class,'destroy']);
 
-Route::get('/products1', [ProductApi1Controller::class,'index']);
-Route::get('/products1/create', [ProductApi1Controller::class,'create']);
-Route::post('/products1', [ProductApi1Controller::class,'store']);
-Route::get('/products1/{id}',[ProductApi1Controller::class,'show']);
-Route::put('/products1/{id}',[ProductApi1Controller::class,'update']);
-Route::delete('/products1/{id}',[ProductApi1Controller::class,'destroy']);
-
 Route::get('/makanans', [MakananApiController::class,'index']);
 Route::get('/makanans/create', [MakananApiController::class,'create']);
 Route::post('/makanans', [MakananApiController::class,'store']);

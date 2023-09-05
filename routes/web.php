@@ -58,16 +58,6 @@ Route::get('/lchefs/{id}/edit', [LchefController::class, 'edit']);
 Route::put('/lchefs/{id}', [LchefController::class, 'update']);
 Route::delete('/lchefs/{id}', [LchefController::class, 'destroy']);
 
-
-
-
-Route::get('/products1', [Product1Controller::class, 'index']);
-Route::get('/products1/create', [Product1Controller::class, 'create']);
-Route::post('/products1', [Product1Controller::class, 'store']);
-Route::get('/products1/{id}/edit', [Product1Controller::class, 'edit']);
-Route::put('/products1/{id}', [Product1Controller::class, 'update']);
-Route::delete('/products1/{id}', [Product1Controller::class, 'destroy']);
-
 Route::get('/laporanpelayans', [LaporanPelayanController::class, 'index']);
 Route::get('/laporanpelayans/create', [LaporanPelayanController::class, 'create']);
 Route::post('/laporanpelayans', [LaporanPelayanController::class, 'store']);
