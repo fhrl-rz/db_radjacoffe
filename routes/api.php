@@ -74,14 +74,14 @@ Route::get('/auth', [AuthController::class, 'auth']);
 
 Route::post('/addcart/{id}', [AddCartController::class, 'addcart']);
 
-Route::get('/', [ProductController::class, 'productList'])->name('products.list');
+
 Route::get('cart', [AddCartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [AddCartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [AddCartController::class, 'updateCart'])->name('cart.update');
 Route::post('remove', [AddCartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [AddCartController::class, 'clearAllCart'])->name('cart.clear');
 
-
+// Route::get('/', [ProductController::class, 'productList'])->name('products.list');
 
 
 

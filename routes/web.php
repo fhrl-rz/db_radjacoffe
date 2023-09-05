@@ -70,9 +70,12 @@ Route::delete('/laporanpelayans/{id}', [LaporanPelayanController::class, 'destro
 Route::post('/getlogin', [AuthController::class, 'getlogin']);
 Route::get('/dashboard', [DashboardController::class, '_invoke']);
 
-Route::get('/', [ProductController::class, 'productList'])->name('products.list');
+// Route::get('/', [ProductController::class, 'productList'])->name('products.list');
 Route::get('cart', [AddCartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [AddCartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [AddCartController::class, 'updateCart'])->name('cart.update');
 Route::post('remove', [AddCartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [AddCartController::class, 'clearAllCart'])->name('cart.clear');
+Route::get('/', function () {
+    return view('welcome');
+});
