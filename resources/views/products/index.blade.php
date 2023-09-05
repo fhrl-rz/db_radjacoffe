@@ -1,4 +1,5 @@
 <h1> LIST PRODUCTS </h1>
+
 <table>
     <thead>
           <tr>
@@ -27,11 +28,9 @@
                 </form>
 
             </td>
-
-
-
         </tr>
         @endforeach
     </tbody>
+
     <a href="/products/create" > Create</a>
 </table>
